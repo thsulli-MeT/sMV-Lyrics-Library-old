@@ -1,8 +1,6 @@
 :root {
   --ink: #f6f0d9;
-  --paper: #15120d;
   --accent: #ffc943;
-  --accent-2: #ff8f1f;
   --line: #2f2318;
 }
 
@@ -24,13 +22,13 @@ body {
   z-index: -1;
   background:
     radial-gradient(circle at 20% 20%, #3d1f0f, transparent 40%),
-    radial-gradient(circle at 80% 0%, #2f1708, transparent 45%),
+    radial-gradient(circle at 80% 0%, #123b5e, transparent 45%),
     linear-gradient(150deg, #120f0b, #23170f 40%, #0c0a08);
 }
 
 .library-app,
 .lyrics-page {
-  width: min(1100px, calc(100% - 2rem));
+  width: min(1180px, calc(100% - 2rem));
   margin: 1.2rem auto 3rem;
 }
 
@@ -75,7 +73,7 @@ h1 {
 }
 
 .subtitle {
-  max-width: 50ch;
+  max-width: 52ch;
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   font-weight: 700;
   font-size: 1.05rem;
@@ -98,6 +96,12 @@ h1 {
   border-radius: 999px;
   line-height: 1;
   box-shadow: 3px 3px 0 #000;
+  text-decoration: none;
+}
+
+.badge:hover {
+  color: #fff;
+  transform: translateY(-1px);
 }
 
 .badge-star {
@@ -137,7 +141,7 @@ h1 {
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 720px;
+  min-width: 860px;
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
 }
 
@@ -145,6 +149,7 @@ th,
 td {
   border: 2px solid var(--line);
   padding: 0.85rem;
+  vertical-align: top;
 }
 
 th {
@@ -169,6 +174,27 @@ a:hover {
   color: #bde8ff;
 }
 
+.thumb-link {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  text-decoration: none;
+  max-width: 210px;
+}
+
+.thumb-link img {
+  width: 210px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 2px solid #47331f;
+  border-radius: 10px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.45);
+}
+
+.thumb-link span {
+  text-decoration: underline;
+}
+
 .back-link {
   display: inline-block;
   margin-top: 0.3rem;
@@ -187,38 +213,18 @@ a:hover {
   margin-top: 0.6rem;
 }
 
-.lyrics-block {
-  margin: 0.95rem;
-  padding: 0.95rem;
-  border: 3px solid var(--line);
-  background: #1b140f;
-  font-family: "Trebuchet MS", sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.45;
+.lyrics-image-wrap {
+  margin: 1rem;
+  border: 3px solid #45301d;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #090806;
 }
 
-.lyrics-block.split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
-}
-
-.burst {
-  display: inline-block;
-  margin: 0 0 0.55rem;
-  color: #0f0c0a;
-  background: var(--accent);
-  padding: 0.4rem 0.75rem;
-  font-family: "Arial Black", sans-serif;
-  text-transform: uppercase;
-  transform: skew(-9deg);
-}
-
-.chorus {
-  background: linear-gradient(130deg, #22170f, #372109);
-  color: var(--accent);
-  text-transform: uppercase;
-  font-family: "Arial Black", sans-serif;
+.lyrics-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .poster-footer {
@@ -229,12 +235,13 @@ a:hover {
   gap: 1rem;
 }
 
-@media (max-width: 700px) {
-  .lyrics-block.split {
-    grid-template-columns: 1fr;
-  }
-
+@media (max-width: 900px) {
   .hero-content {
     padding: 2rem 1rem;
+  }
+
+  .thumb-link,
+  .thumb-link img {
+    width: 170px;
   }
 }
