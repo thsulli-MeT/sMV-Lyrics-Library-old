@@ -57,6 +57,13 @@ body {
   padding: 3rem 2rem;
 }
 
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: 1.2rem;
+  align-items: start;
+}
+
 .eyebrow {
   margin: 0;
   color: var(--accent);
@@ -107,6 +114,58 @@ h1 {
 .badge-star {
   border-radius: 20px;
   border-color: var(--accent);
+}
+
+.sponsor-box {
+  border: 3px solid var(--accent);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #0f0d0a, #1c140d);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  padding: 0.85rem;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.sponsor-label {
+  margin: 0;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.sponsor-box h2 {
+  margin: 0.4rem 0 0;
+  font-size: 1.3rem;
+  color: #fff2bf;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.sponsor-box p {
+  margin: 0.55rem 0 0;
+  color: #efe7cb;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.sponsor-box a {
+  display: inline-block;
+  margin-top: 0.7rem;
+  text-decoration: none;
+  color: #13100d;
+  background: var(--accent);
+  border: 2px solid #fff3c0;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.sponsor-box a:hover {
+  background: #ffe17f;
+  color: #13100d;
 }
 
 .table-panel,
@@ -233,6 +292,16 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+@media (max-width: 980px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-box {
+    max-width: 440px;
+  }
 }
 
 @media (max-width: 900px) {
