@@ -27,23 +27,6 @@ body {
 }
 
 
-.version-banner {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  text-align: center;
-  padding: 0.4rem 0.75rem;
-  background: linear-gradient(90deg, #ffd765, #ffb347, #ffd765);
-  color: #201100;
-  border-bottom: 3px solid #2f2318;
-  box-shadow: 0 3px 0 #000;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
-  font-size: 0.82rem;
-  font-weight: 900;
-}
-
 .library-app,
 .lyrics-page {
   width: min(1180px, calc(100% - 2rem));
