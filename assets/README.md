@@ -1,7 +1,8 @@
 # Assets
 
-Place the uploaded lyrics image here as:
+Place uploaded lyrics images here as:
 
 - `far-ahead-lyrics.jpg`
+- `a-ok-lyrics.jpg`
 
-The UI uses this exact file for the lyrics thumbnail, full-size view, and download.
+The UI uses these exact files for lyrics thumbnails, full-size views, and downloads.
